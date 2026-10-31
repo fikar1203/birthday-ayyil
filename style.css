@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(135deg, #001f54, #034078, #1282a2);
+    overflow: hidden;
+}
+
+/* Kartu ucapan */
+.card {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+    animation: muncul 1.2s ease;
+}
+
+/* Gambar */
+.Birthday {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 15px;
+}
+
+/* Judul */
+h1 {
+    font-size: 25px;
+    color: #bdefff;
+    margin-bottom: 18px;
+}
+
+/* Isi ucapan */
+p {
+    font-size: 14px;
+    line-height: 1.9;
+    color: #f0faff;
+    margin-bottom: 15px;
+}
+
+/* Pengirim */
+.muted {
+    color: #bdefff;
+    font-style: italic;
+    text-align: right;
+    margin-top: 20px;
+}
+
+/* Ruang tambahan */
+.space {
+    height: 10px;
+}
+
+/* Animasi kartu */
+@keyframes muncul {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Tampilan HP */
+@media (max-width: 480px) {
+    .card {
+        padding: 22px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 13px;
+    }
+}
