@@ -6,13 +6,15 @@
 
 body {
     min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     padding: 20px;
     font-family: 'Poppins', Arial, sans-serif;
     background: linear-gradient(135deg, #001f54, #034078, #1282a2);
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /* Kartu ucapan */
@@ -29,6 +31,7 @@ body {
     color: white;
     box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
     animation: muncul 1.2s ease;
+    margin: 20px auto;
 }
 
 /* Gambar */
@@ -45,16 +48,18 @@ body {
 /* Judul */
 h1 {
     font-size: 25px;
+    line-height: 1.4;
     color: #bdefff;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
 /* Isi ucapan */
 p {
     font-size: 14px;
-    line-height: 1.9;
+    line-height: 1.8;
     color: #f0faff;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
+    text-align: center;
 }
 
 /* Pengirim */
@@ -62,12 +67,17 @@ p {
     color: #bdefff;
     font-style: italic;
     text-align: right;
-    margin-top: 20px;
+    margin-top: 25px;
+    margin-bottom: 0;
 }
 
 /* Ruang tambahan */
 .space {
     height: 10px;
+}
+.text {
+    max-width: 320px;
+    margin: 0 auto;
 }
 
 /* Animasi kartu */
